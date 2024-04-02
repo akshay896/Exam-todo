@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Application</title>
+  <link rel="stylesheet" href="./styl.css">
+</head>
+<body>
+  <div class="container">
+    <div class="heading"><h1>To-Do List</h1></div>
+    <input id="userInput" type="text" placeholder="Add New Task">
+    <button class="head-btn"  onclick="addNote()">Add</button>
+    <button class="head-btn" onclick="resetList()">Reset</button>
+    <div class="output-box">
+      <ul id="output">
+      </ul>
+      
+    </div>
+  </div>
+</body>
+<script>
+  const addNote = () => {
+    const newTask = document.getElementById('userInput');
+    const output = document.getElementById('output');
+    
+    if (newTask.value) {
+      output.innerHTML += `
+        <li>
+          <input id="checkBox" class="checkbox" type="checkbox">
+          <span class="vaalue">${newTask.value}</span>
+          <button class="delete-btn" onclick="deleteTask(this.parentNode)">❌</button>
+        </li>
+      `
+      localStorage.setItem("Task",newTask.value)
+    } else {
+      alert("Please enter a valid task");
+    }
+  };
+
+  const deleteTask = (task) => {
+    task.remove(); 
+  };
+  const resetList = () => {
+    const output = document.getElementById('output');
+    output.innerHTML = ''; 
+    document.getElementById('userInput').value = ''; 
+  };
+  
+</script>
+
+</html>
+

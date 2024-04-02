@@ -1,0 +1,48 @@
+.container{
+  width: 50%;
+  height: 500px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+ul{
+  list-style: none;
+}
+#userInput{
+  height: 35px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 5px;
+  border: solid 0.2px;
+}
+.head-btn{
+  border: none;
+  height: 35px;
+  border-radius: 10px;
+  background-color: green;
+  color: #fff;
+  width: 60px;
+}
+li{
+  color: #000;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+*{
+  font-family: arial,sans-serif;
+}
+h1{
+  color: orange;
+}
+.heading{
+  padding: 15px;
+}
+.delete-btn{
+  border: none;
+  background-color: #fff;
+}
+.vaalue{
+  margin: 0px 50px;
+}
